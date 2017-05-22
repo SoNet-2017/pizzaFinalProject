@@ -1,4 +1,4 @@
-## AngularJS + Firebase: completed version of the Pizza++ app##
+## AngularJS + Firebase: completed version of the Pizza++ app ##
 
 This project is a simple AngularJS application used as running example during the lessons of the Social Networking course at Politecnico di Torino.
 
