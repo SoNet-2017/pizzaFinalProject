@@ -1,0 +1,26 @@
+<div  ng-controller="addPizzaViewCtrl as $ctrl">
+    <div class="alert alert-success alert-dismissible" role="alert" ng-if="dati.feedback">{{ dati.feedback }}</div>
+    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="dati.error">{{ dati.error }}</div>
+
+    <form id="frmAddPizza" role="form" ng-submit="addPizza()">
+        <h2>Add a new pizza</h2>
+        <div class="form-group">
+            <b>Descriptive image:</b>
+            <file-upload on-change="$ctrl.onChange">
+            </file-upload>
+        </div>
+        <div class="form-group">
+            <label for="txtName">Name</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Enter name" name="name" ng-model="dati.nome_pizza" />
+        </div>
+        <div class="form-group">
+            <label for="txtPizzeria">Pizzeria</label>
+            <input type="text" class="form-control" id="txtPizzeria" placeholder="Enter the name of the pizzeria" name="pizzeria" ng-model="dati.nome_pizzeria" />
+        </div>
+        <div class="form-group">
+            <label for="txtAddress">Pizzeria address</label>
+            <input type="text" class="form-control" id="txtAddress" placeholder="Enter the address of the pizzeria" name="address" ng-model="dati.address" />
+        </div>
+        <button type="submit" class="btn btn-success center-block">Insert</button>
+    </form>
+</div>

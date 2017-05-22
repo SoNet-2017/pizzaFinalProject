@@ -1,0 +1,6 @@
+<h4>Select a user to chat with: </h4>
+<p ng-repeat="user in testValue=(dati.availableUsers | filter:{logged:true} | filter:{$id: '!' + dati.userId})">
+    <a href="#!/chat/{{user.$id}}">{{user.email}}</a>
+</p>
+<p ng-show="!testValue.length">No available users</p>
+
